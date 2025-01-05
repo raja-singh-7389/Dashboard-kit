@@ -1,13 +1,10 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# Youtube Analysis Dashboard 
 
-Description of the app ...
+This streamlit dashboard app allows you to analyze a hypothetical YouTube Channel Data and display various metrics and visualizations, which is helpful for content creators in understanding their channel's performance over time.
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://youtube-analysis-dashboard.streamlit.app/)
 
 ## GitHub Codespaces
 
