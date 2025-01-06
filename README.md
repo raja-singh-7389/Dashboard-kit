@@ -1,6 +1,6 @@
-# Youtube Analysis Dashboard 
+# Penguin Species Prediction App
 
-This streamlit dashboard app allows you to analyze a hypothetical YouTube Channel Data and display various metrics and visualizations, which is helpful for content creators in understanding their channel's performance over time.
+This is a machine learning model
 
 ## Demo App
 
