@@ -14,8 +14,7 @@ st.divider()
 st.subheader("Welcome")
 
 # Create two columns: one for the text and one for the image
-col1, col2 = st.columns([2,0.5])  # [2, 1] means the left column is 2x and right column is 1x
-
+col1, col2 = st.columns([2, 1])  # [2, 1] means the left column is 2x and right column is 1x
 
 with col1:
     st.info("""
@@ -24,10 +23,9 @@ with col1:
     Hi! I’m Raja Singh Thakur. I am a passionate data scientist and analyst with a focus on turning data into actionable insights. With expertise in data visualization, statistical analysis, and machine learning, I enjoy solving complex problems and helping businesses make informed decisions. My goal is to uncover stories hidden within data and deliver clear, impactful solutions.
     """)
 
-with col1:
-    # Resize the image (width is set to 250px)
+with col2:
+    # Resize the image (width is set to 200px)
     st.image(image, caption="Raja Singh Thakur", use_container_width=False, width=200)
-
 
 # Certifications Section
 st.write("""
