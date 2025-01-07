@@ -1,6 +1,10 @@
 import streamlit as st
+from stream_option_menu import option_menu
+
 st.set_page_config(layout="wide")
 st.title('My Portfolio website')
+st.divider()
+
 st.subheader('Welcome')
 
 st.info("""
@@ -24,3 +28,18 @@ st.write("[View certificate](https://github.com/raja-singh-7389/Portfolio-websit
 
 st.divider()
 
+with st.container():
+    selected = option_menu(
+        menu_title=None,  # No title for the menu
+        options=["Contact", "Projects", "Blogs"],
+        icons=["chat-left-text-fill", "code-slash", "file-text-fill"],  # Add icons for all options
+        orientation="horizontal"  # Display menu horizontally
+    )
+
+
+if selected == "Contact":
+    st.write("You selected **Contact**.")
+elif selected == "Projects":
+    st.write("You selected **Projects**.")
+elif selected == "Blogs":
+    st.write("You selected **Blogs**.")
