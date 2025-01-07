@@ -4,7 +4,7 @@ This is my portfolio website
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://portfolio-raja_singh121.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://portfolio-raja-singh121.streamlit.app/)
 
 ## GitHub Codespaces
 
