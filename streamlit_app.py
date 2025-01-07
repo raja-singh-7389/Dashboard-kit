@@ -76,7 +76,7 @@ elif selected == "Projects":
     st.subheader("Projects")
     st.write("### Here are some of my recent projects:")
     st.write("- **Penguin Species Prediction App**: A machine learning app to classify penguins based on physical attributes.")
-    st.write("[View App](https://penguin-species-prediction.streamlit.app)")
+    st.write("[View App](https://machine-learning-app112.streamlit.app)")
     st.write("- **Adidas Sales Dashboard**: A sales performance dashboard to visualize Adidas sales data.")
     st.write("[View Dashboard](https://adidas-sales-dashboard-121.streamlit.app)")
 
