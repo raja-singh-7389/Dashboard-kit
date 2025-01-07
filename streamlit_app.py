@@ -1,4 +1,5 @@
 import streamlit as st
+import stream_option_menu
 from stream_option_menu import option_menu
 
 st.set_page_config(layout="wide")
