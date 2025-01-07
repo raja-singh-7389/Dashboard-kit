@@ -44,15 +44,16 @@ if selected == "Contact":
     st.subheader("Contact")  
     st.write("You can reach me at:")  
     st.write("- **Email**: raja1011singhrajput@gmail.com")  
-    st.write("- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)")  
+    st.write("- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/raj-singh-8qoso)  
     st.write("- **GitHub**: [Your GitHub](https://github.com/raja-singh-7389)")  
 
 elif selected == "Projects":  
     st.subheader("Projects")  
     st.write("### Here are some of my recent projects:")  
     st.write("- **Penguin Species Prediction App**: A machine learning app to classify penguins based on physical attributes.")  
-    st.write("- **Stock Price Prediction**: Time series analysis and forecasting of stock prices using ARIMA and LSTM.")  
-    st.write("- **Customer Segmentation**: Cluster analysis for targeted marketing campaigns.")  
+    st.write("[View App]()")
+    st.write("- **Adidas Sales Dashboard**")  
+    st.write("[View Dashboard]()")
 
 elif selected == "Blogs":  
     st.subheader("Blogs")  
