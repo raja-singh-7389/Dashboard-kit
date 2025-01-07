@@ -1,3 +1,5 @@
-streamlit  
-streamlit-option-menu  
+streamlit
+streamlit-lottie
+requests
 Pillow
+streamlit-option-menu
