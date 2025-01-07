@@ -25,7 +25,7 @@ with col1:
 
 with col2:
     # Resize the image (width is set to 250px)
-    st.image(image, caption="Raja Singh Thakur", use_column_width=False, width=250)
+    st.image(image, caption="Raja Singh Thakur", use_container_width=False, width=250)
 
 # Certifications Section
 st.write("""
