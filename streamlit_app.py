@@ -43,7 +43,7 @@ with st.container():
 if selected == "Contact":  
     st.subheader("Contact")  
     st.write("You can reach me at:")  
-    st.write("- **Email**: your_email@example.com")  
+    st.write("- **Email**: raja1011singhrajput@gmail.com")  
     st.write("- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)")  
     st.write("- **GitHub**: [Your GitHub](https://github.com/raja-singh-7389)")  
 
