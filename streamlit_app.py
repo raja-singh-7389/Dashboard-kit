@@ -6,13 +6,34 @@ st.set_page_config(layout="wide", page_title="Portfolio - Raja Singh Thakur")
 st.title("My Portfolio Website")
 st.divider()
 
+# Adding custom CSS for animation
+st.markdown("""
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # About Section
 st.subheader("Welcome")
+
+# Using fade-in effect for the "About Me" section
+st.markdown('<div class="fade-in">', unsafe_allow_html=True)
 st.info("""
 **About Me**
 
 Hi! I’m Raja Singh Thakur. I am a passionate data scientist and analyst with a focus on turning data into actionable insights. With expertise in data visualization, statistical analysis, and machine learning, I enjoy solving complex problems and helping businesses make informed decisions. My goal is to uncover stories hidden within data and deliver clear, impactful solutions.
 """)
+st.markdown('</div>', unsafe_allow_html=True)
 
 # Certifications Section
 st.write("""
@@ -34,6 +55,7 @@ st.divider()
 st.header("Education")
 st.write("""
 - **Graduation**:  
+  Bachelor in Computer Application  
   Swami Vivekananda University, Sagar, Madhya Pradesh  
   Grade: 7.4 | Year: 2019-2024
 
@@ -41,6 +63,7 @@ st.write("""
   XII - Shailesh Memorial School, Sagar, Madhya Pradesh | Grade: 7  
   X - Christ Convent School, Patna Bujurg, Rehli, Sagar, Madhya Pradesh
 """)
+st.divider()
 
 # Navigation Menu
 with st.container():
