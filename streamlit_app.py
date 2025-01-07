@@ -1,6 +1,8 @@
 import streamlit as st  
 from streamlit_option_menu import option_menu  
+from PIL import Image
 
+image = Image.open()
 # Page Configuration  
 st.set_page_config(layout="wide")  
 st.title('My Portfolio Website')  
