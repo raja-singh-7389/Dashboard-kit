@@ -1,46 +1,62 @@
-import streamlit as st
-import stream_option_menu
-from stream_option_menu import option_menu
+import streamlit as st  
+from streamlit_option_menu import option_menu  
 
-st.set_page_config(layout="wide")
-st.title('My Portfolio website')
-st.divider()
+# Page Configuration  
+st.set_page_config(layout="wide")  
+st.title('My Portfolio Website')  
+st.divider()  
 
-st.subheader('Welcome')
+# About Section  
+st.subheader('Welcome')  
+st.info("""  
+**About Me**  
 
-st.info("""
-About Me
+Hi! I’m Raja Singh Thakur. I am a passionate data scientist and analyst with a focus on turning data into actionable insights. With expertise in data visualization, statistical analysis, and machine learning, I enjoy solving complex problems and helping businesses make informed decisions. My goal is to uncover stories hidden within data and deliver clear, impactful solutions.  
+""")  
 
-Hi! I’m Raja Singh Thakur, I am a passionate data scientist and analyst with a focus on turning data into actionable insights. With expertise in data visualization, statistical analysis, and machine learning, I enjoy solving complex problems and helping businesses make informed decisions. My goal is to uncover stories hidden within data and deliver clear, impactful solutions.
-       """)
+# Certifications Section  
+st.write("""  
+### Certifications  
 
-st.write('''Certifications
+- Advanced Probability Theory - IIT Delhi  
+- Applied Linear Algebra in AI and ML - IIT Kharagpur  
+- Data Analytics with Python - IIT Roorkee  
+- Database Management System - IIT Kharagpur  
+- Business Statistics - IIT Roorkee  
+- Data Structures and Algorithms Using Python - Chennai Mathematical Institute  
+- Enhancing Soft Skills and Personality - IIT Kanpur  
 
-- Advance probability theory - IIT Delhi
-- Applied Linear Algebra in AI and ML - IIT Kharagpur
-- Data Analytics with Python - IIT Roorkee
-- Database Management System - IIT Kharagpur
-- Business Statistics - IIT Roorkee
-- Data structures And Algorithms using Python - Chennai Mathematical Institute
-- Enhacing soft skills and Personlity - IIT Kanpur
+[View Certificates](https://github.com/raja-singh-7389/Portfolio-website.git)  
+""")  
+st.divider()  
 
-''')
-st.write("[View certificate](https://github.com/raja-singh-7389/Portfolio-website.git)")
+# Navigation Menu  
+with st.container():  
+    selected = option_menu(  
+        menu_title=None,  # No title for the menu  
+        options=["Contact", "Projects", "Blogs"],  
+        icons=["chat-left-text-fill", "code-slash", "file-text-fill"],  # Add icons for all options  
+        orientation="horizontal"  # Display menu horizontally  
+    )  
 
-st.divider()
+# Dynamic Content  
+if selected == "Contact":  
+    st.subheader("Contact")  
+    st.write("You can reach me at:")  
+    st.write("- **Email**: your_email@example.com")  
+    st.write("- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/your-profile)")  
+    st.write("- **GitHub**: [Your GitHub](https://github.com/raja-singh-7389)")  
 
-with st.container():
-    selected = option_menu(
-        menu_title=None,  # No title for the menu
-        options=["Contact", "Projects", "Blogs"],
-        icons=["chat-left-text-fill", "code-slash", "file-text-fill"],  # Add icons for all options
-        orientation="horizontal"  # Display menu horizontally
-    )
+elif selected == "Projects":  
+    st.subheader("Projects")  
+    st.write("### Here are some of my recent projects:")  
+    st.write("- **Penguin Species Prediction App**: A machine learning app to classify penguins based on physical attributes.")  
+    st.write("- **Stock Price Prediction**: Time series analysis and forecasting of stock prices using ARIMA and LSTM.")  
+    st.write("- **Customer Segmentation**: Cluster analysis for targeted marketing campaigns.")  
 
-
-if selected == "Contact":
-    st.write("You selected **Contact**.")
-elif selected == "Projects":
-    st.write("You selected **Projects**.")
-elif selected == "Blogs":
-    st.write("You selected **Blogs**.")
+elif selected == "Blogs":  
+    st.subheader("Blogs")  
+    st.write("### Recent Blog Posts:")  
+    st.write("- [Understanding Machine Learning Models](#)")  
+    st.write("- [Data Visualization Best Practices](#)")  
+    st.write("- [How to Start a Career in Data Science](#)")  
