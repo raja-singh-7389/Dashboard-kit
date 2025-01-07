@@ -1,6 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
+from streamlit_lottie import st_lottie
+import requests
+
+# Function to load Lottie animation from a URL
+def load_lottie_url(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
 
 # Open the image using Image.open() method
 image = Image.open("Image.jpg")
@@ -10,8 +19,12 @@ st.set_page_config(layout="wide", page_title="Portfolio - Raja Singh Thakur")
 st.title("My Portfolio Website")
 st.divider()
 
-# About Section with image and text in columns
+# Add a Lottie animation to the About Section
 st.subheader("Welcome")
+
+# Load Lottie animation (use a URL from LottieFiles or your own)
+lottie_url = "https://assets6.lottiefiles.com/packages/lf20_zdzyrxhx.json"  # Example Lottie URL
+lottie_animation = load_lottie_url(lottie_url)
 
 # Create two columns: one for the text and one for the image
 col1, col2 = st.columns([2, 1])  # [2, 1] means the left column is 2x and right column is 1x
@@ -26,6 +39,10 @@ with col1:
 with col2:
     # Resize the image (width is set to 200px)
     st.image(image, caption="Raja Singh Thakur", use_container_width=False, width=200)
+
+# Display the Lottie animation
+if lottie_animation:
+    st_lottie(lottie_animation, speed=1, width=400, height=400, key="animation1")
 
 # Certifications Section
 st.write("""
