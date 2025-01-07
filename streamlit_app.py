@@ -22,3 +22,5 @@ st.write('''Certifications
 ''')
 st.write("[View certificate](https://github.com/raja-singh-7389/Portfolio-website.git)")
 
+st.divider()
+
