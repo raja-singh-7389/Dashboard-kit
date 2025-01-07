@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from PIL import Image
 
-image = Image("Myimage")
+image = Image("Image.jpg")
 
 # Page Configuration
 st.set_page_config(layout="wide", page_title="Portfolio - Raja Singh Thakur")
