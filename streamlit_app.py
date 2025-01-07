@@ -51,13 +51,16 @@ elif selected == "Projects":
     st.subheader("Projects")  
     st.write("### Here are some of my recent projects:")  
     st.write("- **Penguin Species Prediction App**: A machine learning app to classify penguins based on physical attributes.")  
-    st.write("[View App]()")
+    st.write("[View App](https://adidas-sales-dashboard-121.streamlit.app)")
     st.write("- **Adidas Sales Dashboard**")  
-    st.write("[View Dashboard]()")
+    st.write("[View Dashboard](https://adidas-sales-dashboard-121.streamlit.app)")
 
 elif selected == "Blogs":  
     st.subheader("Blogs")  
     st.write("### Recent Blog Posts:")  
     st.write("- [Understanding Machine Learning Models](#)")  
+    st.write("[View Blog](https://github.com/raja-singh-7389)")
     st.write("- [Data Visualization Best Practices](#)")  
+    st.write("[View Blog](https://github.com/raja-singh-7389)")
     st.write("- [How to Start a Career in Data Science](#)")  
+    st.write("[View Blog](https://github.com/raja-singh-7389)")
