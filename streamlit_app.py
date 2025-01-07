@@ -14,7 +14,7 @@ st.divider()
 st.subheader("Welcome")
 
 # Create two columns: one for the text and one for the image
-col1, col2 = st.columns([2, 1])  # [2, 1] means the left column is 2x and right column is 1x
+col1, col2 = st.columns([2, 0.45])  # [2, 1] means the left column is 2x and right column is 1x
 
 with col1:
     st.info("""
