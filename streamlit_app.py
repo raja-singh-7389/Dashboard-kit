@@ -1,8 +1,8 @@
 import streamlit as st
 st.set_page_config(layout="wide")
+st.title('My Portfolio website')
+st.subheader('Welcome')
 
-st.subheader('Hi :Wave:')
-st.title('🎈 My Portfolio website')
 
 st.write('##')
 
