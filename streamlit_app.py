@@ -14,7 +14,7 @@ st.divider()
 st.subheader("Welcome")
 
 # Create two columns: one for the text and one for the image
-col1, col2 = st.columns([2, 0.45])  # [2, 1] means the left column is 2x and right column is 1x
+col1, col2 = st.columns([2, 0.45])  # [2, 0.45] means the left column is larger than the right column
 
 with col1:
     st.info("""
@@ -27,40 +27,12 @@ with col2:
     # Resize the image (width is set to 200px)
     st.image(image, caption="Raja Singh Thakur", use_container_width=False, width=200)
 
-# Certifications Section
-st.write("""
-### Certifications
-
-- Advanced Probability Theory - IIT Delhi  
-- Applied Linear Algebra in AI and ML - IIT Kharagpur  
-- Data Analytics with Python - IIT Roorkee  
-- Database Management System - IIT Kharagpur  
-- Business Statistics - IIT Roorkee  
-- Data Structures and Algorithms Using Python - Chennai Mathematical Institute  
-- Enhancing Soft Skills and Personality - IIT Kanpur  
-
-[View Certificates](https://github.com/raja-singh-7389/Portfolio-website.git)
-""")
-st.divider()
-
-# Education Section
-st.header("Education")
-st.write("""
-- **Graduation**:  
-  Swami Vivekananda University, Sagar, Madhya Pradesh  
-  Grade: 7.4 | Year: 2019-2024
-
-- **School**:  
-  XII - Shailesh Memorial School, Sagar, Madhya Pradesh | Grade: 7  
-  X - Christ Convent School, Patna Bujurg, Rehli, Sagar, Madhya Pradesh
-""")
-
 # Navigation Menu
 with st.container():
     selected = option_menu(
         menu_title=None,
-        options=["Contact", "Projects", "Blogs"],
-        icons=["chat-left-text-fill", "code-slash", "file-text-fill"],
+        options=["Contact", "Projects", "Education", "Certifications", "Resume"],
+        icons=["chat-left-text-fill", "code-slash", "mortarboard-fill", "check-circle-fill", "file-earmark-person"],
         orientation="horizontal"
     )
 
@@ -69,8 +41,8 @@ if selected == "Contact":
     st.subheader("Contact")
     st.write("You can reach me at:")
     st.write("- **Email**: raja1011singhrajput@gmail.com")
-    st.write("- **LinkedIn**: [Your LinkedIn](https://linkedin.com/in/raj-singh-8qoso)")
-    st.write("- **GitHub**: [Your GitHub](https://github.com/raja-singh-7389)")
+    st.write("- **LinkedIn**: [My LinkedIn](https://linkedin.com/in/raj-singh-8qoso)")
+    st.write("- **GitHub**: [My GitHub](https://github.com/raja-singh-7389)")
 
 elif selected == "Projects":
     st.subheader("Projects")
@@ -80,12 +52,44 @@ elif selected == "Projects":
     st.write("- **Adidas Sales Dashboard**: A sales performance dashboard to visualize Adidas sales data.")
     st.write("[View Dashboard](https://adidas-sales-dashboard-121.streamlit.app)")
 
-elif selected == "Blogs":
-    st.subheader("Blogs")
-    st.write("### Recent Blog Posts:")
-    st.write("- **Understanding Machine Learning Models**")
-    st.write("[View Blog](https://github.com/raja-singh-7389/Portfolio-website.git)")
-    st.write("- **Data Visualization Best Practices**")
-    st.write("[View Blog](https://github.com/raja-singh-7389/Portfolio-website.git)")
-    st.write("- **How to Start a Career in Data Science**")
-    st.write("[View Blog](https://github.com/raja-singh-7389/Portfolio-website.git)")
+elif selected == "Education":
+    st.subheader("Education")
+    st.write("""
+    - **Graduation**:  
+      Swami Vivekananda University, Sagar, Madhya Pradesh  
+      Grade: 7.4 | Year: 2019-2024
+
+    - **School**:  
+      XII - Shailesh Memorial School, Sagar, Madhya Pradesh | Grade: 7  
+      X - Christ Convent School, Patna Bujurg, Rehli, Sagar, Madhya Pradesh
+    """)
+
+elif selected == "Certifications":
+    st.subheader("Certifications")
+    st.write("""
+    - **Advanced Probability Theory** - IIT Delhi  
+      [View Certificate](https://example.com/advanced-probability)
+
+    - **Applied Linear Algebra in AI and ML** - IIT Kharagpur  
+      [View Certificate](https://example.com/applied-linear-algebra)
+
+    - **Data Analytics with Python** - IIT Roorkee  
+      [View Certificate](https://example.com/data-analytics-python)
+
+    - **Database Management System** - IIT Kharagpur  
+      [View Certificate](https://example.com/database-management)
+
+    - **Business Statistics** - IIT Roorkee  
+      [View Certificate](https://example.com/business-statistics)
+
+    - **Data Structures and Algorithms Using Python** - Chennai Mathematical Institute  
+      [View Certificate](https://example.com/data-structures-python)
+
+    - **Enhancing Soft Skills and Personality** - IIT Kanpur  
+      [View Certificate](https://example.com/soft-skills)
+    """)
+
+elif selected == "Resume":
+    st.subheader("Resume")
+    st.write("Click below to download my resume:")
+    st.markdown("[Download Resume](https://example.com/resume.pdf)")
