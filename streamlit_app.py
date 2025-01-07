@@ -6,34 +6,32 @@ st.set_page_config(layout="wide", page_title="Portfolio - Raja Singh Thakur")
 st.title("My Portfolio Website")
 st.divider()
 
-# Adding custom CSS for animation
-st.markdown("""
-    <style>
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        .fade-in {
-            animation: fadeIn 2s ease-in-out;
-        }
-    </style>
-""", unsafe_allow_html=True)
+# Add GIF animations for "man waving hello" and "coder doing code"
+# Replace these URLs with the actual links to your GIFs
+man_waving_url = "https://media.giphy.com/media/3o6Zt2zADt92jvTyl6/giphy.gif"  # Example GIF URL for man waving
+coder_gif_url = "https://media.giphy.com/media/2w0kS4jxpmkpW/giphy.gif"  # Example GIF URL for coder typing
+
+# Display animation
+st.subheader("Welcome")
+st.write("Here are some animations:")
+
+# Create two columns for the animations
+col1, col2 = st.columns(2)
+
+# Column 1: Man waving hello animation
+with col1:
+    st.image(man_waving_url, caption="Man Waving Hello", use_column_width=True)
+
+# Column 2: Coder typing code animation
+with col2:
+    st.image(coder_gif_url, caption="Coder Typing Code", use_column_width=True)
 
 # About Section
-st.subheader("Welcome")
-
-# Using fade-in effect for the "About Me" section
-st.markdown('<div class="fade-in">', unsafe_allow_html=True)
 st.info("""
 **About Me**
 
 Hi! I’m Raja Singh Thakur. I am a passionate data scientist and analyst with a focus on turning data into actionable insights. With expertise in data visualization, statistical analysis, and machine learning, I enjoy solving complex problems and helping businesses make informed decisions. My goal is to uncover stories hidden within data and deliver clear, impactful solutions.
 """)
-st.markdown('</div>', unsafe_allow_html=True)
 
 # Certifications Section
 st.write("""
@@ -55,7 +53,7 @@ st.divider()
 st.header("Education")
 st.write("""
 - **Graduation**:  
-  Bachelor in Computer Application  
+Bachleor in Computer Application
   Swami Vivekananda University, Sagar, Madhya Pradesh  
   Grade: 7.4 | Year: 2019-2024
 
@@ -66,13 +64,12 @@ st.write("""
 st.divider()
 
 # Navigation Menu
-with st.container():
-    selected = option_menu(
-        menu_title=None,
-        options=["Contact", "Projects", "Blogs"],
-        icons=["chat-left-text-fill", "code-slash", "file-text-fill"],
-        orientation="horizontal"
-    )
+selected = option_menu(
+    menu_title=None,
+    options=["Contact", "Projects", "Blogs"],
+    icons=["chat-left-text-fill", "code-slash", "file-text-fill"],
+    orientation="horizontal"
+)
 
 # Dynamic Content Rendering
 if selected == "Contact":
