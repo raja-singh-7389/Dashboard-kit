@@ -8,6 +8,7 @@ import requests
 def load_lottie_url(url: str):
     r = requests.get(url)
     if r.status_code != 200:
+        st.error(f"Failed to load animation from {url}. Status code: {r.status_code}")
         return None
     return r.json()
 
